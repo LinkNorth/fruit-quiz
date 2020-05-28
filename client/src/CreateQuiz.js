@@ -110,7 +110,6 @@ export default class CreateQuiz extends React.Component {
       questions: this.questionRefs.map(x => x.current.getState()),
     };
 
-    console.log('STATE', state);
     axios.post('/api/quiz', state)
       .then(() => {
         this.setState({redirect: true});
